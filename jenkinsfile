@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'NodeJS 20.6.1'  
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Installing dependencies...'
+                sh 'npm install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // sh 'npm test'  <- Uncomment this once you have tests
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // Placeholder for actual deployment steps
+            }
+        }
+    }
+}
