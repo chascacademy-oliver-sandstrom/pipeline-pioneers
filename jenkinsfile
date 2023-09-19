@@ -16,14 +16,15 @@ pipeline {
             steps {
                 echo 'Installing dependencies...'
                 sh 'npm install'
+                echo 'Running build...'
+                sh 'npm run build'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // sh 'npm test'  <- Uncomment this once you have tests
-            }
+                sh 'npm test'
         }
 
         stage('Deploy') {
