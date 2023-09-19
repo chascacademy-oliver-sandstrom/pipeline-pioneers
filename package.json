@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A simple project to demonstrate CI/CD with Jenkins",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "npm run build"
   },
   "repository": {
     "type": "git",
