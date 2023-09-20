@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'echo' "Deployment stage will go here, placeholder until we choose hosting site"
+                sh 'echo "Deployment stage will go here, placeholder until we choose hosting site"'
             }
         }
     }
