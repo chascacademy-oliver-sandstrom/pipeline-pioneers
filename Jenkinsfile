@@ -38,7 +38,7 @@ pipeline {
         stage('Update Jira Ticket') {
             steps {
                 script {
-                    def jiraUrl = 'https://pipeline-pioneers.atlassian.net/rest/api/2/issue/KAN-2/comment'
+                    def jiraUrl = 'https://pipeline-pioneers.atlassian.net/rest/api/2/issue/KAN-9/comment'
                     def comment = 'This is the updated comment for the Jira ticket.'
 
                     def curlCmd = """curl -i -X POST -H 'Content-Type: application/json' -u ${JIRA_CREDENTIALS_USR}:${JIRA_CREDENTIALS_PSW} -d '{
