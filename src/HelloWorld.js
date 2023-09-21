@@ -3,7 +3,7 @@ import React from 'react';
 const HelloWorld = () => {
   return (
     <div>
-      Hosting är superkul!!
+      Hosting är verkligen superkul!!
     </div>
   );
 };

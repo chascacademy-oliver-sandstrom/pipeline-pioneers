@@ -3,6 +3,6 @@ import HelloWorld from './HelloWorld';
 
 test('renders Hello, World!', () => {
   render(<HelloWorld />);
-  const linkElement = screen.getByText(/Hosting är superkul!!/i);
+  const linkElement = screen.getByText(/Hosting är verkligen superkul!!/i);
   expect(linkElement).toBeInTheDocument();
 });
