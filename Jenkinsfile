@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Deployment stage will go here, placeholder until we choose a hosting site"'
+                sh 'echo "Deployment stage here"'
             }
         }
         stage('Update Jira Ticket') {
@@ -48,7 +48,7 @@ pipeline {
                     def responseContent = sh(script: curlCmd, returnStdout: true).trim()
                     echo "Response from Jira: ${responseContent}"
 
-                    if (responseContent.contains("\"id\":")) {  // checking if the response has an "id" field, indicating a successful comment creation
+                    if (responseContent.contains("\"id\":")) {  
                         echo "Jira ticket updated successfully."
                     } else {
                         error "Failed to update Jira ticket."
